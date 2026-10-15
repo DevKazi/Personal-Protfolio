@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-dark: #050507;
+  --text-primary: #ece6d8;
+  --text-muted: #9a9486;
+  --gold: #c9a24b;
+  --gold-border: rgba(201, 162, 75, 0.22);
+  --gold-glow: rgba(201, 162, 75, 0.12);
+  --glass-card: rgba(18, 18, 24, 0.62);
+}
+
+html {
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+  background-color: #050507;
+  color: #ece6d8;
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Accessible luxury gold focus outline */
+:focus-visible {
+  outline: 2px solid #c9a24b;
+  outline-offset: 3px;
+}
+
+/* Custom dark luxury scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050507;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(201, 162, 75, 0.35);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(201, 162, 75, 0.6);
+}
+
+.glass-card {
+  background: rgba(18, 18, 24, 0.62);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(201, 162, 75, 0.22);
+}
+
+.gold-glow-hover {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gold-glow-hover:hover {
+  border-color: rgba(201, 162, 75, 0.6);
+  box-shadow: 0 10px 30px -10px rgba(201, 162, 75, 0.25);
+}
