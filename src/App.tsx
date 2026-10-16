@@ -1,4 +1,5 @@
 import React, { Suspense, lazy } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar.tsx';
 import Hero from './components/Hero.tsx';
 import AboutSection from './components/AboutSection.tsx';
@@ -39,6 +40,9 @@ export default function App() {
 
       {/* Semantic Footer */}
       <Footer />
+
+      {/* Vercel Web Analytics */}
+      <Analytics />
     </div>
   );
 }
